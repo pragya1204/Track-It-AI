@@ -1,0 +1,65 @@
+/* Global Styling */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Title Styling */
+  .homepage h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .homepage h1 span {
+    color: rgb(9, 74, 195);
+  }
+  
+  /* Paragraph Styling */
+  .homepage p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button Styling */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--btn-text);
+    background-color: var(--btn-bg);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: var(--btn-hover);
+    transform: scale(1.05);
+  }
+  
+  /* Theme Variables */
+  :root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --btn-bg: #007bff;
+    --btn-text: #ffffff;
+    --btn-hover: #0056b3;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e4e4e4;
+    --btn-bg: #555;
+    --btn-text: #fff;
+    --btn-hover: #777;
+  }
+  

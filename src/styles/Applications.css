@@ -1,0 +1,132 @@
+/* Default (Light Theme) */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #222;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --input-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f9f9f9;
+    --card-bg: #292929;
+    --border-color: #444;
+    --input-bg: #333;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Main Applications Container */
+  .applications-container {
+    margin-left: 260px; /* Adjusting for sidebar width */
+    padding: 2rem;
+    margin-top: 3.4rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Heading */
+  .applications-container h2 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Search & Filters */
+  .search-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  .search-bar{
+    width: 200%;
+  }
+  .filter-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .search-application-btn {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Applications List */
+  .applications-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Application Card */
+  .application-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 30rem;
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .application-card:hover {
+    box-shadow: 0px 6px 15px var(--shadow-color);
+  }
+  
+  /* Job Details */
+  .job-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  /* Status Tags */
+  .status-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Status Colors */
+  .status-tag.ongoing {
+    background: #ffcc00;
+    color: #222;
+  }
+  
+  .status-tag.accepted {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .status-tag.rejected {
+    background: #f44336;
+    color: white;
+  }
+  
+  /* No Results */
+  .no-results {
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 2rem;
+  }
+  
