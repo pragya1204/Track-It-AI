@@ -5,6 +5,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase"; // Firebase config
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import Footer from "../components/Footer";
 
 function Profile() {
   const [firstName, setFirstName] = useState("John");
@@ -34,7 +35,7 @@ function Profile() {
   };
 
   return (
-    <>
+    <div className="profile-content">
      <Sidebar />
      <ThemeToggle />
      <div className="profile-container">
@@ -56,7 +57,8 @@ function Profile() {
         <button className="logout-btn" onClick={handleLogout}>Log Out</button>
       </div>
     </div>
-     </>
+    <Footer />
+     </div>
     
   );
 }

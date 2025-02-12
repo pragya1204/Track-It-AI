@@ -1,12 +1,7 @@
 /* Main container with sidebar */
 .addeventjob-container {
-  display: flex;
-  justify-content: center;
-  margin-left: 250px;
-  justify-content: flex-start; /* Sidebar on the left */
-  /* align-items: center; */
-  min-height: 100vh;
-  background: var(--bg-color);
+  background: rgb(25,17,41);
+  background: linear-gradient(338deg, rgba(25,17,41,1) 0%, rgba(109,89,171,1) 50%, rgba(40,13,87,1) 100%);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -22,17 +17,17 @@
   padding: 20px;
   margin: 20px;
   margin-top: 4rem;
+  margin-left: 250px;
   max-width: 500px;
   height: 700px;
-  background: var(--form-bg);
+  background: transparent;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 }
 
 /* Form title */
 .form-container h2 {
-  color: var(--text-color);
+  color: whitesmoke;
   margin-bottom: 70px;
 }
 .form-container form {
@@ -41,6 +36,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  background-color:transparent;
+  box-shadow: none;
+  color: whitesmoke;
 }
 /* Input fields */
 input, select {
@@ -50,7 +48,7 @@ input, select {
   margin-bottom: 15px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  background: var(--input-bg);
+  background-color: rgba(244, 239, 239, 0.5);
   color: var(--text-color);
   transition: background 0.3s ease, border 0.3s ease;
 }
@@ -61,7 +59,7 @@ textarea{
   margin-bottom: 15px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  background: var(--input-bg);
+  background-color: rgba(244, 239, 239, 0.5);
   color: var(--text-color);
   transition: background 0.3s ease, border 0.3s ease;
 }

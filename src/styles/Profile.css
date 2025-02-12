@@ -19,13 +19,17 @@
     --button-bg: #d9534f;
     --button-hover: #a94442;
   }
+  .profile-content{
+    background: rgb(25,17,41);
+    background: linear-gradient(338deg, rgba(25,17,41,1) 0%, rgba(109,89,171,1) 50%, rgba(40,13,87,1) 100%);
+  }
   
   .profile-container {
     margin-left: 250px; /* Sidebar spacing */
     padding: 2rem;
     margin-top: 3.2rem;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: transparent;
+    color: whitesmoke;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@
   }
   
   .profile-card {
-    background: var(--card-bg);
+    background-color: rgba(244, 239, 239, 0.1);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

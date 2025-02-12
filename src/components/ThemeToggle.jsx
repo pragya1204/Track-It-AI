@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase"; // Firebase config
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import "../styles/ThemeToggle.css";
+import logo from '../assets/logo.mp4';
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -19,10 +20,7 @@ function ThemeToggle() {
   }, []);
 
   // Handle theme change
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+ 
 
   // Logout function
   const handleLogout = async () => {
@@ -36,24 +34,36 @@ function ThemeToggle() {
 
   return (
     <nav className="navbar">
+      <video className="logo-video" autoPlay loop muted>
+        <source src={logo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       {/* Website Title */}
       <h2 className="navbar-title">Track-It AI</h2>
 
       {/* Right Section */}
       <div className="nav-actions">
         {/* Theme Toggle Button */}
-        <button 
+        {/* <button 
           className="theme-toggle" 
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? "🌙 " : "☀️ "}
-        </button>
+        </button> */}
 
         {/* Login / Logout Button */}
         {user ? (
-          <button className="auth-button logout" onClick={handleLogout}>Logout</button>
+          <button className="auth-button logout" onClick={handleLogout}>
+            Logout
+          </button>
         ) : (
-          <button className="auth-button login" onClick={() => navigate("/login")}>Login</button>
+          <button
+            className="auth-button login"
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </button>
         )}
       </div>
     </nav>

@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import ThemeToggle from "../components/ThemeToggle";
 import "../styles/Dashboard.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import Footer from "../components/Footer";
 
 function Dashboard() {
   // Dummy data for stats
@@ -76,6 +77,7 @@ function Dashboard() {
           </ResponsiveContainer>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 }

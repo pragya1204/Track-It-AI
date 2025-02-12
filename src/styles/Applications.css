@@ -8,14 +8,9 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
   }
   
-  /* Dark Theme */
-  [data-theme="dark"] {
-    --bg-color: #1e1e1e;
-    --text-color: #f9f9f9;
-    --card-bg: #292929;
-    --border-color: #444;
-    --input-bg: #333;
-    --shadow-color: rgba(255, 255, 255, 0.1);
+  .page-container{
+    background: rgb(25,17,41);
+    background: linear-gradient(338deg, rgba(25,17,41,1) 0%, rgba(109,89,171,1) 50%, rgba(40,13,87,1) 100%);
   }
   
   /* Main Applications Container */
@@ -23,7 +18,7 @@
     margin-left: 260px; /* Adjusting for sidebar width */
     padding: 2rem;
     margin-top: 3.4rem;
-    background: var(--bg-color);
+    background: transparent;
     color: var(--text-color);
     min-height: 100vh;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -33,6 +28,7 @@
   .applications-container h2 {
     font-size: 24px;
     margin-bottom: 1.5rem;
+    color: whitesmoke;
   }
   
   /* Search & Filters */
@@ -50,7 +46,7 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--border-color);
-    background: var(--input-bg);
+    background-color: rgba(245, 242, 242, 0.9);
     color: var(--text-color);
     font-size: 16px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -75,10 +71,11 @@
   
   /* Application Card */
   .application-card {
-    background: var(--card-bg);
+    background-color: rgba(244, 239, 239, 0.3);
+    color: whitesmoke;
     border-radius: 10px;
     padding: 1.5rem;
-    width: 30rem;
+    width: 27rem;
     box-shadow: 0px 4px 10px var(--shadow-color);
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }

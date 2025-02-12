@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import "../styles/AddEventJobPage.css";
 import ThemeToggle from "../components/ThemeToggle";
+import Footer from "../components/Footer";
 
 function AddEventJobPage() {
   const [formData, setFormData] = useState({
@@ -67,6 +68,7 @@ function AddEventJobPage() {
           <button type="submit">Add</button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

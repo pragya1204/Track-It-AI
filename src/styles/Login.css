@@ -29,13 +29,15 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: var(--bg-color);
+  background: rgb(25,17,41);
+    background: linear-gradient(338deg, rgba(25,17,41,1) 0%, rgba(109,89,171,1) 50%, rgba(40,13,87,1) 100%);
   color: var(--text-color);
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 h2 {
   margin-bottom: 1rem;
+  color: whitesmoke;
 }
 
 /* Form */
@@ -45,7 +47,8 @@ form {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: var(--form-bg);
+  background-color: rgba(244, 239, 239, 0.1);
+
   padding: 1.5rem;
   width: 300px;
   height: 270px;
@@ -93,7 +96,7 @@ button[type="submit"]:hover {
 
 /* OAuth Buttons */
 .oauth-buttons {
-  margin-top: 1rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   gap: 10px;

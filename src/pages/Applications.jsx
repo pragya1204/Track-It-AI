@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/Applications.css";
 import ThemeToggle from "../components/ThemeToggle";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 const applicationsData = [
   { id: 1, title: "Software Engineer", company: "TechCorp", location: "Remote", date: "Feb 5, 2025", status: "Ongoing", type: "Full-Time" },
@@ -37,58 +38,69 @@ function Applications() {
   });
 
   return (
-    <>
-    <Sidebar />
-    <ThemeToggle />
-    <div className="applications-container">
-        
-      <h2>Applications</h2>
+    <div className="page-container">
+      <Sidebar />
+      <ThemeToggle />
+      <div className="applications-container">
+        <h2>Applications</h2>
 
-      <div className="search-filters">
-        <input
-          type="text"
-          placeholder="Search jobs..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-bar"
-        />
+        <div className="search-filters">
+          <input
+            type="text"
+            placeholder="Search jobs..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-bar"
+          />
 
-        <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)} className="filter-dropdown">
-          <option value="all">Status</option>
-          <option value="Ongoing">Ongoing</option>
-          <option value="Accepted">Accepted</option>
-          <option value="Rejected">Rejected</option>
-        </select>
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="filter-dropdown"
+          >
+            <option value="all">Status</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+          </select>
 
-        <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)} className="filter-dropdown">
-          <option value="all">All Types</option>
-          <option value="Full-Time">Full-Time</option>
-          <option value="Part-Time">Part-Time</option>
-        </select>
+          <select
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value)}
+            className="filter-dropdown"
+          >
+            <option value="all">All Types</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+          </select>
+        </div>
+        {/* <button className="search-application-btn">Search Application</button> */}
 
-      </div>
-      {/* <button className="search-application-btn">Search Application</button> */}
-
-      <div className="applications-list">
-        {filteredApplications.length > 0 ? (
-          filteredApplications.map((app) => (
-            <div key={app.id} className={`application-card ${app.status.toLowerCase()}`}>
-              <h3>{app.title}</h3>
-              <p>{app.company}</p>
-              <div className="job-details">
-                <span>📍 {app.location}</span>
-                <span>📅 {app.date}</span>
+        <div className="applications-list">
+          {filteredApplications.length > 0 ? (
+            filteredApplications.map((app) => (
+              <div
+                key={app.id}
+                className={`application-card ${app.status.toLowerCase()}`}
+              >
+                <h3>{app.title}</h3>
+                <p>{app.company}</p>
+                <div className="job-details">
+                  <span>📍 {app.location}</span>
+                  <span>📅 {app.date}</span>
+                </div>
+                <span className={`status-tag ${app.status.toLowerCase()}`}>
+                  {app.status}
+                </span>
               </div>
-              <span className={`status-tag ${app.status.toLowerCase()}`}>{app.status}</span>
-            </div>
-          ))
-        ) : (
-          <p className="no-results">No applications found.</p>
-        )}
+            ))
+          ) : (
+            <p className="no-results">No applications found.</p>
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
-    </>
-    
   );
 }
 
