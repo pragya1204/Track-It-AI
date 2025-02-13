@@ -42,14 +42,11 @@
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   z-index: 1000;
 }
-.logo-video {
-  width: 50px; /* Adjust size as needed */
-  height: 50px;
-  object-fit: contain;
-  margin-right: 10px;
-
+.logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
- 
 
 
 /* Navbar Title */
@@ -91,7 +88,7 @@
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  margin-left: 65rem;
+  margin-left: 75rem;
   margin-right: 30px;
   font-weight: bold;
   cursor: pointer;

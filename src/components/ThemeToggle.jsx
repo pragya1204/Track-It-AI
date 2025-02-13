@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase"; // Firebase config
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import "../styles/ThemeToggle.css";
-import logo from '../assets/logo.mp4';
+import logo from '../assets/logo.png';
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -34,10 +34,7 @@ function ThemeToggle() {
 
   return (
     <nav className="navbar">
-      <video className="logo-video" autoPlay loop muted>
-        <source src={logo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <img src={logo} alt="logo" className="logo" />
 
       {/* Website Title */}
       <h2 className="navbar-title">Track-It AI</h2>
